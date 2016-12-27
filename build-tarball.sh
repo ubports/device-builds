@@ -18,6 +18,8 @@ wDir=$(mktemp -d /tmp/ota.XXXXXXXX)
 mkdir $wDir/partitions
 cp $dir/boot.img $wDir/partitions
 cp $dir/recovery.img $wDir/partitions
+# Copy common device-files first so if there is some device spesific changes it will override the common ones
+cp -r device-files/common/* $wDir/
 cp -r device-files/$device/* $wDir/
 mkdir -p $wDir/system/var/lib/lxc/android/
 cp $dir/system.img $wDir/system/var/lib/lxc/android/
