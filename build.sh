@@ -6,5 +6,5 @@ export USE_CCACHE=1
 repo sync -j10 -c --force-sync
 source build/envsetup.sh
 lunch $device
-time make -j3
-
+time make clobber
+time make -j10
