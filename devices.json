@@ -1,0 +1,11 @@
+[
+    {
+        "name": "hammerhead", "target": "aosp_hammerhead-eng"
+    },
+    {
+        "name": "bacon", "target": "cm_bacon-eng"
+    },
+    {
+        "name": "FP2", "target": "cm_FP2-eng"
+    }
+]
