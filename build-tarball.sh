@@ -20,7 +20,7 @@ cp $dir/boot.img $wDir/partitions
 cp $dir/recovery.img $wDir/partitions
 # Copy common device-files first so if there is some device spesific changes it will override the common ones
 cp -r device-files/common/* $wDir/
-cp -r device-files/$device/* $wDir/
+cp -r device-files/$device/* $wDir/ || true
 mkdir -p $wDir/system/var/lib/lxc/android/
 cp $dir/system.img $wDir/system/var/lib/lxc/android/
 tar cfJ "$output/device_"$device"_devel.tar.xz" -C $wDir partitions/ system/
