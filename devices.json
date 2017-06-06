@@ -1,14 +1,14 @@
 [
     {
-        "name": "hammerhead", "target": "aosp_hammerhead-eng"
+        "name": "hammerhead", "target": "aosp_hammerhead-userdebug"
     },
     {
-        "name": "bacon", "target": "cm_bacon-eng"
+        "name": "bacon", "target": "cm_bacon-userdebug"
     },
     {
-        "name": "FP2", "target": "cm_FP2-eng"
+        "name": "FP2", "target": "cm_FP2-userdebug"
     },
     {
-        "name": "mako", "target": "aosp_mako-eng"
+        "name": "mako", "target": "aosp_mako-userdebug"
     } 
 ]
