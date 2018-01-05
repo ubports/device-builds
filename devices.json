@@ -1,14 +1,14 @@
 [
     {
-        "name": "hammerhead", "target": "aosp_hammerhead-userdebug"
+        "name": "hammerhead", "target": "aosp_hammerhead-userdebug", "device_dir": "device/lge/hammerhead"
     },
     {
-        "name": "bacon", "target": "cm_bacon-userdebug"
+        "name": "bacon", "target": "cm_bacon-userdebug", "device_dir": "device/oneplus/bacon"
     },
     {
-        "name": "FP2", "target": "cm_FP2-userdebug"
+        "name": "FP2", "target": "cm_FP2-userdebug", "device_dir": "device/fairphone/FP2"
     },
     {
-        "name": "mako", "target": "aosp_mako-userdebug"
+        "name": "mako", "target": "aosp_mako-userdebug", "device_dir": "device/lge/mako"
     } 
 ]

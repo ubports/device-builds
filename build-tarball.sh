@@ -1,7 +1,8 @@
-set -e
+set -ex
 
 device=$1
 output=$2
+device_dir=$3
 dir=out/target/product/$device
 
 echo "Working on device: $device"
@@ -18,9 +19,15 @@ wDir=$(mktemp -d /tmp/ota.XXXXXXXX)
 mkdir $wDir/partitions
 cp $dir/boot.img $wDir/partitions
 cp $dir/recovery.img $wDir/partitions
+
+## REMOVAL OF DEVICE_FILES
 # Copy common device-files first so if there is some device spesific changes it will override the common ones
-cp -r device-files/common/* $wDir/
-cp -r device-files/$device/* $wDir/ || true
+#cp -r device-files/common/* $wDir/
+#cp -r device-files/$device/* $wDir/ || true
+
+## This is the new overlay used for partitions, firmware, etc.
+cp -r "$device_dir/ubuntu-overlay/*" $wDir/ || true
+
 mkdir -p $wDir/system/var/lib/lxc/android/
 cp $dir/system.img $wDir/system/var/lib/lxc/android/
 tar cfJ "$output/device_"$device"_devel.tar.xz" -C $wDir partitions/ system/
