@@ -10,5 +10,11 @@
     },
     {
         "name": "mako", "target": "aosp_mako-userdebug", "device_dir": "device/lge/mako"
-    } 
+    },
+    {
+	"name": "flo", "target": "aosp_flo-userdebug", "device_dir": "device/asus/flo"
+    },
+    {
+	"name": "deb", "target": "aosp_deb-userdebug", "device_dir": "device/asus/deb"
+    },
 ]
