@@ -32,8 +32,8 @@ mkdir -p $wDir/system/var/lib/lxc/android/
 
 ## SPARSE FILE TRANSLATION
 # Needed with Halium-7.1 builds mostly
-isSparse=$(file -b0 $dir/system.img)
-if [[ $isSparse == "Android sparse image"* ]]; then
+fileType=$(file -b0 $dir/system.img)
+if [[ $fileType == "Android sparse image"* ]]; then
     echo "Converting sparse image to image"
     mv $dir/system.img $dir/system.sparse.img
     simg2img $dir/system.sparse.img $dir/system.img
