@@ -37,6 +37,8 @@ if [[ $isSparse == "Android sparse image"* ]]; then
     echo "Converting sparse image to image"
     mv $dir/system.img $dir/system.sparse.img
     simg2img $dir/system.sparse.img $dir/system.img
+    e2fsck -fy $dir/system.img >/dev/null
+    resize2fs -p -M $dir/system.img
 fi
 
 cp $dir/system.img $wDir/system/var/lib/lxc/android/
