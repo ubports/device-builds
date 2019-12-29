@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="ubp"
+	fetch="http://github.com/ubports"
+	review="http://review.ubports.com"
+	revision="refs/heads/halium-7.1" />
+
+
+    <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" remote="ubp" />
+
+    <project path="kernel/lge/hammerhead" name="android_kernel_lge_hammerhead" remote="ubp" />
+
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="them" />
+</manifest>
+
