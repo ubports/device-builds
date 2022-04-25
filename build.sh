@@ -3,7 +3,7 @@ set -e
 device=$1
 
 export USE_CCACHE=1
-repo sync -j10 -c --force-sync
+repo sync -c --force-sync
 
 if [ -d "hybris-patches" ]; then
     hybris-patches/apply-patches.sh --mb
